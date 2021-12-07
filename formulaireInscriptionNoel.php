@@ -8,7 +8,7 @@ if ($_GET) {
     $pseudo     = $_GET['pseudo'];
 
 
-    $query  = "insert into inscription (pseudo) values ( '$pseudo' );";
+    $query  = "insert into inscriptions (pseudo) values ( '$pseudo' );";
     print($query);
     $res = query($query);
     if ($res)
