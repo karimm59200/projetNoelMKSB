@@ -9,7 +9,7 @@ if ($_GET) {
 
 
     $query  = "insert into inscriptions (pseudo) values ( '$pseudo' );";
-    print($query);
+    //print($query);
     $res = query($query);
     if ($res)
         print("<h3> $pseudo enregistré</h3>\n");
