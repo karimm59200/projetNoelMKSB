@@ -51,4 +51,4 @@
 </form>
 <br>
 <a href="logout.php">Déconnexion</a>
-<?php } $mysqli->close(); ?>
+<?php } ?>
