@@ -4,7 +4,7 @@
 
     $mysqli = new mysqli($servername, $username, $password, $database);
 
-    $query  = "SELECT * FROM inscription;";
+    $query  = "SELECT * FROM inscriptions;";
 
     $res = $mysqli->query( $query );
     

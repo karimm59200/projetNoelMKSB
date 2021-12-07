@@ -1,6 +1,7 @@
-create database fetedenoel;
+CREATE DATABASE fetedenoel;
 
+USE fetedenoel;
 
-create table inscription ( id int PRIMARY KEY not null auto_increment , pseudo VARCHAR(30), cadeau int);
+DROP TABLE IF EXISTS inscriptions;
 
-CREATE TABLE dateTirage (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT, dateFin DATETIME);
+CREATE TABLE inscriptions ( id INT PRIMARY KEY NOT NULL AUTO_INCREMENT , pseudo VARCHAR(30));
