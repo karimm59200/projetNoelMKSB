@@ -1,5 +1,8 @@
 <?php
     require_once "ressources.php";
+    require_once "fonctions.php";
+
+    entete('(Admin) Inscription');
 
     if ($_POST)
     {

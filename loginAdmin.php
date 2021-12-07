@@ -1,6 +1,9 @@
 <?php
     session_start();
     require_once "ressources.php";
+    require_once "fonctions.php";
+
+    entete('(Admin) Login');
 
     if ($_POST)
     {

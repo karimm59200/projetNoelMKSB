@@ -1,6 +1,9 @@
 <?php
     session_start();
     require_once "ressources.php";
+    require_once "fonctions.php";
+
+    entete('(Admin) Mise à jour tirage');
 
     $nom = $_SESSION['nom'];
     $pw = $_SESSION['pw'];
