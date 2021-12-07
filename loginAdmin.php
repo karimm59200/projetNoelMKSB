@@ -21,6 +21,7 @@
         else
         {
             $_SESSION['nom'] = $nom;
+            $_SESSION['pw'] = $pw;
             header("location: pageAdmin.php");
         }
 
