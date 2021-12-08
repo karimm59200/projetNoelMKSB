@@ -1,0 +1,135 @@
+.navbar {
+    background-color: #CC231E !important;
+}
+.navbar a {
+    font-weight: bold;
+}
+
+
+/* COMPTEUR */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./img/background.jpg");
+    background-size: cover;
+    background-position: center center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-weight: normal;
+    font-size: 2.5rem;
+}
+
+.countdown-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.big-text {
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin: 1rem 2rem;
+}
+
+.countdown-el {
+    text-align: center;
+}
+
+.countdown-el span {
+    font-size: 1.3rem;
+}
+
+.compteur {
+    background-color: #F5624D;
+    margin-right: 500px;
+    margin-left: 500px;
+    border-radius: 0px 0px 15px 15px;
+}
+
+#inscription {
+    cursor: pointer;
+    position: relative;
+    bottom: 600px;
+    font-weight: bold;
+    color: black;
+    background-color: #D9990B;
+    width: 10em;  height: 3em;
+}
+#presentation h2 {
+    color: #D9990B;
+}
+#presentation {
+    color: white;
+    font-size: 1.5rem;
+}
+#pereNoel {
+    z-index: 7;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    left: 95px;
+}
+
+/* BOULE DE NOEL */
+
+.sphere {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 10px;
+    background: 
+      radial-gradient(
+        circle at 30% 30%,
+        #ffe136,
+        #774400
+      );
+      box-shadow: 0px 0px 15px 0px #00000077;
+  }
+
+/* INDEX  2 */
+
+#envoyer {
+    font-weight: bold;
+    background-color: #D9990B;
+    width: 10em;  height: 3em;
+}
+#input {
+    background-color: #0F8A5F;
+    border: black;
+    color: white;
+    height: 50px;
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+#label2 {
+    font-weight: bold;
+}
+
+#form2 {
+    position: relative;
+    top: 200px;
+}
+
+.cadeau  {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+}
+.cadeau button {
+    background-color: transparent;
+    border: none;
+}
