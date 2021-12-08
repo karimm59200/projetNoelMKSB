@@ -13,7 +13,7 @@ if ($_POST) {
 }
 ?>
 <form action="#" method="POST">
-    <input type="text" name='pseudo' placeholder=" entre ton pseudo">
+    <input type="text" name='pseudo' placeholder=" entre ton pseudo" required>
     <br>
 
     <input type="checkbox" name="cadeau" OnClick="checkboxx();" id="checkbox" />
