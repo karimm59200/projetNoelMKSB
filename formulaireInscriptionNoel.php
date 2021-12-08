@@ -1,15 +1,10 @@
 <?php
 require_once "ressources.php";
-require_once "fonctions.php";
 
-entete(" formulaire inscription ");
+if ($_POST) {
+    $pseudo = $_POST['pseudo'];
 
-if ($_GET) {
-    $pseudo     = $_GET['pseudo'];
-
-
-    $query  = "insert into inscriptions (pseudo) values ( '$pseudo' );";
-    //print($query);
+    $query  = "insert into inscription (pseudo) values ( '$pseudo' );";
     $res = query($query);
     if ($res)
         print("<h3> $pseudo enregistré</h3>\n");
@@ -17,13 +12,13 @@ if ($_GET) {
         print("<h3>erreur enregistrement !!!</h3>\n");
 }
 ?>
-<form action="#" method="get">
+<form action="#" method="POST">
     <input type="text" name='pseudo' placeholder=" entre ton pseudo">
     <br>
-    
 
     <input type="checkbox" name="cadeau" OnClick="checkboxx();" id="checkbox" />
-    <button type="submit" name="envoyer" value="J'ai déposé mon cadeau !" id="submit" disabled="disabled" >J'ai déposé mon cadeau !</button>
+    <label>Je confirme avoir un cadeau</label><br>
+    <button type="submit" name="envoyer" id="submit" disabled="disabled" >Ajouter</button>
     
     <br>
     
@@ -37,6 +32,3 @@ if ($_GET) {
         }
     }
 </script>
-</body>
-
-</html>
