@@ -55,3 +55,5 @@
 <br>
 <a href="logout.php">Déconnexion</a>
 <?php } ?>
+</body>
+</html>
