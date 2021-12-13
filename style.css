@@ -1,34 +1,577 @@
-.navbar {
-    background-color: #CC231E !important;
+/* LES 3 PAGES REUNIES */
+
+.dark-toggle-mode {
+    display: flex;
+    justify-content: end;
+    height: 95vh;
+    width: 95vw;
 }
-.navbar a {
+
+.div-conteneur {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    opacity: 0.7;
+}
+
+.conteneur {
+  transform: scale(1);
+  font-weight: bold;
+    font-size: 10px;
+    flex-direction: column;
+    text-align: center;
     font-weight: bold;
-}
-
-
-/* COMPTEUR */
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
-
-* {
-    box-sizing: border-box;
+    border-radius: 5px;
+    height: 50px;
+    width: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
-    background-image: url("./img/background.jpg");
-    background-size: cover;
-    background-position: center center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
+  background: linear-gradient(#123, #111);
+	height: 100vh;
+	transition: background 0.2s linear;
+  overflow: hidden;
 }
 
-h1 {
-    display: flex;
-    justify-content: center;
-    font-weight: normal;
-    font-size: 2.5rem;
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  align-items: center;
+  padding: 3%;
 }
+
+body.dark {
+  background: linear-gradient(rgb(214, 44, 21), rgb(161, 58, 58));
+}
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.label {
+	background-color: #111;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(0.7);  
+}
+
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+
+#circleBlue {
+	color: blue;
+}
+#circleRed {
+	color: red;
+}
+
+/* SNOW */
+
+.snowflake {
+  --size: 1vw;
+  width: var(--size);
+  height: var(--size);
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: -5vh;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translate3d(var(--left-ini), 0, 0);
+  }
+  100% {
+    transform: translate3d(var(--left-end), 110vh, 0);
+  }
+}
+.snowflake:nth-child(1) {
+  --size: 0.4vw;
+  --left-ini: -3vw;
+  --left-end: -3vw;
+  left: 66vw;
+  animation: snowfall 7s linear infinite;
+  animation-delay: -10s;
+}
+
+.snowflake:nth-child(2) {
+  --size: 0.6vw;
+  --left-ini: 0vw;
+  --left-end: 6vw;
+  left: 24vw;
+  animation: snowfall 11s linear infinite;
+  animation-delay: -5s;
+}
+
+.snowflake:nth-child(3) {
+  --size: 0.4vw;
+  --left-ini: 10vw;
+  --left-end: 3vw;
+  left: 33vw;
+  animation: snowfall 15s linear infinite;
+  animation-delay: -9s;
+}
+
+.snowflake:nth-child(4) {
+  --size: 0.4vw;
+  --left-ini: -4vw;
+  --left-end: -6vw;
+  left: 84vw;
+  animation: snowfall 8s linear infinite;
+  animation-delay: -1s;
+}
+
+.snowflake:nth-child(5) {
+  --size: 0.4vw;
+  --left-ini: -1vw;
+  --left-end: -1vw;
+  left: 25vw;
+  animation: snowfall 10s linear infinite;
+  animation-delay: -6s;
+}
+
+.snowflake:nth-child(6) {
+  --size: 0.6vw;
+  --left-ini: 3vw;
+  --left-end: -4vw;
+  left: 33vw;
+  animation: snowfall 12s linear infinite;
+  animation-delay: -7s;
+}
+
+.snowflake:nth-child(7) {
+  --size: 0.8vw;
+  --left-ini: -7vw;
+  --left-end: 1vw;
+  left: 10vw;
+  animation: snowfall 11s linear infinite;
+  animation-delay: -5s;
+}
+
+.snowflake:nth-child(8) {
+  --size: 0.2vw;
+  --left-ini: -8vw;
+  --left-end: -3vw;
+  left: 32vw;
+  animation: snowfall 11s linear infinite;
+  animation-delay: -1s;
+}
+
+.snowflake:nth-child(9) {
+  --size: 0.4vw;
+  --left-ini: 1vw;
+  --left-end: 3vw;
+  left: 84vw;
+  animation: snowfall 14s linear infinite;
+  animation-delay: -5s;
+}
+
+.snowflake:nth-child(10) {
+  --size: 0.4vw;
+  --left-ini: 3vw;
+  --left-end: 0vw;
+  left: 13vw;
+  animation: snowfall 6s linear infinite;
+  animation-delay: -10s;
+}
+
+.snowflake:nth-child(11) {
+  --size: 0.8vw;
+  --left-ini: 4vw;
+  --left-end: -5vw;
+  left: 53vw;
+  animation: snowfall 12s linear infinite;
+  animation-delay: -9s;
+}
+
+.snowflake:nth-child(12) {
+  --size: 0.2vw;
+  --left-ini: 9vw;
+  --left-end: 5vw;
+  left: 28vw;
+  animation: snowfall 12s linear infinite;
+  animation-delay: -1s;
+}
+
+.snowflake:nth-child(13) {
+  --size: 0.4vw;
+  --left-ini: 10vw;
+  --left-end: 10vw;
+  left: 3vw;
+  animation: snowfall 9s linear infinite;
+  animation-delay: -2s;
+}
+
+.snowflake:nth-child(14) {
+  --size: 0.4vw;
+  --left-ini: -4vw;
+  --left-end: 1vw;
+  left: 88vw;
+  animation: snowfall 6s linear infinite;
+  animation-delay: -2s;
+}
+
+.snowflake:nth-child(15) {
+  --size: 0.6vw;
+  --left-ini: 10vw;
+  --left-end: 5vw;
+  left: 25vw;
+  animation: snowfall 13s linear infinite;
+  animation-delay: -3s;
+}
+
+.snowflake:nth-child(16) {
+  --size: 1vw;
+  --left-ini: -9vw;
+  --left-end: 7vw;
+  left: 62vw;
+  animation: snowfall 7s linear infinite;
+  animation-delay: -7s;
+}
+
+.snowflake:nth-child(17) {
+  --size: 1vw;
+  --left-ini: -1vw;
+  --left-end: -7vw;
+  left: 90vw;
+  animation: snowfall 13s linear infinite;
+  animation-delay: -7s;
+}
+
+.snowflake:nth-child(18) {
+  --size: 0.6vw;
+  --left-ini: -1vw;
+  --left-end: 8vw;
+  left: 3vw;
+  animation: snowfall 8s linear infinite;
+  animation-delay: -6s;
+}
+
+.snowflake:nth-child(19) {
+  --size: 0.4vw;
+  --left-ini: -3vw;
+  --left-end: -3vw;
+  left: 18vw;
+  animation: snowfall 14s linear infinite;
+  animation-delay: -5s;
+}
+
+.snowflake:nth-child(20) {
+  --size: 0.2vw;
+  --left-ini: 3vw;
+  --left-end: -7vw;
+  left: 21vw;
+  animation: snowfall 12s linear infinite;
+  animation-delay: -4s;
+}
+
+.snowflake:nth-child(21) {
+  --size: 0.2vw;
+  --left-ini: -8vw;
+  --left-end: 1vw;
+  left: 67vw;
+  animation: snowfall 10s linear infinite;
+  animation-delay: -3s;
+}
+
+.snowflake:nth-child(22) {
+  --size: 0.4vw;
+  --left-ini: 6vw;
+  --left-end: 5vw;
+  left: 26vw;
+  animation: snowfall 15s linear infinite;
+  animation-delay: -2s;
+}
+
+.snowflake:nth-child(23) {
+  --size: 0.2vw;
+  --left-ini: 1vw;
+  --left-end: -9vw;
+  left: 41vw;
+  animation: snowfall 15s linear infinite;
+  animation-delay: -9s;
+}
+
+.snowflake:nth-child(24) {
+  --size: 0.4vw;
+  --left-ini: 3vw;
+  --left-end: 8vw;
+  left: 34vw;
+  animation: snowfall 10s linear infinite;
+  animation-delay: -8s;
+}
+
+.snowflake:nth-child(25) {
+  --size: 0.4vw;
+  --left-ini: -9vw;
+  --left-end: -9vw;
+  left: 16vw;
+  animation: snowfall 8s linear infinite;
+  animation-delay: -3s;
+}
+
+.snowflake:nth-child(26) {
+  --size: 0.6vw;
+  --left-ini: -4vw;
+  --left-end: -2vw;
+  left: 27vw;
+  animation: snowfall 10s linear infinite;
+  animation-delay: -10s;
+}
+
+.snowflake:nth-child(27) {
+  --size: 0.2vw;
+  --left-ini: -6vw;
+  --left-end: 1vw;
+  left: 25vw;
+  animation: snowfall 13s linear infinite;
+  animation-delay: -2s;
+}
+
+.snowflake:nth-child(28) {
+  --size: 0.4vw;
+  --left-ini: 8vw;
+  --left-end: -1vw;
+  left: 26vw;
+  animation: snowfall 15s linear infinite;
+  animation-delay: -2s;
+}
+
+.snowflake:nth-child(29) {
+  --size: 0.4vw;
+  --left-ini: 6vw;
+  --left-end: 2vw;
+  left: 13vw;
+  animation: snowfall 6s linear infinite;
+  animation-delay: -2s;
+}
+
+.snowflake:nth-child(30) {
+  --size: 0.4vw;
+  --left-ini: -8vw;
+  --left-end: 2vw;
+  left: 94vw;
+  animation: snowfall 6s linear infinite;
+  animation-delay: -2s;
+}
+
+.snowflake:nth-child(31) {
+  --size: 1vw;
+  --left-ini: -9vw;
+  --left-end: -1vw;
+  left: 55vw;
+  animation: snowfall 13s linear infinite;
+  animation-delay: -1s;
+}
+
+.snowflake:nth-child(32) {
+  --size: 0.8vw;
+  --left-ini: 10vw;
+  --left-end: 4vw;
+  left: 42vw;
+  animation: snowfall 14s linear infinite;
+  animation-delay: -7s;
+}
+
+.snowflake:nth-child(33) {
+  --size: 1vw;
+  --left-ini: -6vw;
+  --left-end: 3vw;
+  left: 36vw;
+  animation: snowfall 9s linear infinite;
+  animation-delay: -8s;
+}
+
+.snowflake:nth-child(34) {
+  --size: 0.4vw;
+  --left-ini: 3vw;
+  --left-end: -7vw;
+  left: 22vw;
+  animation: snowfall 15s linear infinite;
+  animation-delay: -6s;
+}
+
+.snowflake:nth-child(35) {
+  --size: 0.8vw;
+  --left-ini: 2vw;
+  --left-end: 7vw;
+  left: 84vw;
+  animation: snowfall 8s linear infinite;
+  animation-delay: -7s;
+}
+
+.snowflake:nth-child(36) {
+  --size: 1vw;
+  --left-ini: 2vw;
+  --left-end: 8vw;
+  left: 48vw;
+  animation: snowfall 10s linear infinite;
+  animation-delay: -4s;
+}
+
+.snowflake:nth-child(37) {
+  --size: 0.2vw;
+  --left-ini: 1vw;
+  --left-end: -5vw;
+  left: 62vw;
+  animation: snowfall 7s linear infinite;
+  animation-delay: -6s;
+}
+
+.snowflake:nth-child(38) {
+  --size: 1vw;
+  --left-ini: -9vw;
+  --left-end: 6vw;
+  left: 29vw;
+  animation: snowfall 6s linear infinite;
+  animation-delay: -9s;
+}
+
+.snowflake:nth-child(39) {
+  --size: 0.4vw;
+  --left-ini: -8vw;
+  --left-end: 3vw;
+  left: 95vw;
+  animation: snowfall 8s linear infinite;
+  animation-delay: -9s;
+}
+
+.snowflake:nth-child(40) {
+  --size: 0.8vw;
+  --left-ini: 10vw;
+  --left-end: 3vw;
+  left: 70vw;
+  animation: snowfall 8s linear infinite;
+  animation-delay: -6s;
+}
+
+.snowflake:nth-child(41) {
+  --size: 0.6vw;
+  --left-ini: 5vw;
+  --left-end: -4vw;
+  left: 91vw;
+  animation: snowfall 10s linear infinite;
+  animation-delay: -6s;
+}
+
+.snowflake:nth-child(42) {
+  --size: 0.2vw;
+  --left-ini: -5vw;
+  --left-end: 3vw;
+  left: 70vw;
+  animation: snowfall 10s linear infinite;
+  animation-delay: -7s;
+}
+
+.snowflake:nth-child(43) {
+  --size: 0.8vw;
+  --left-ini: -7vw;
+  --left-end: 1vw;
+  left: 57vw;
+  animation: snowfall 15s linear infinite;
+  animation-delay: -6s;
+}
+
+.snowflake:nth-child(44) {
+  --size: 0.6vw;
+  --left-ini: 7vw;
+  --left-end: -8vw;
+  left: 65vw;
+  animation: snowfall 13s linear infinite;
+  animation-delay: -8s;
+}
+
+.snowflake:nth-child(45) {
+  --size: 0.6vw;
+  --left-ini: 1vw;
+  --left-end: 9vw;
+  left: 31vw;
+  animation: snowfall 12s linear infinite;
+  animation-delay: -4s;
+}
+
+.snowflake:nth-child(46) {
+  --size: 0.8vw;
+  --left-ini: 10vw;
+  --left-end: -2vw;
+  left: 14vw;
+  animation: snowfall 12s linear infinite;
+  animation-delay: -6s;
+}
+
+.snowflake:nth-child(47) {
+  --size: 1vw;
+  --left-ini: -1vw;
+  --left-end: 2vw;
+  left: 56vw;
+  animation: snowfall 12s linear infinite;
+  animation-delay: -1s;
+}
+
+.snowflake:nth-child(48) {
+  --size: 0.4vw;
+  --left-ini: 3vw;
+  --left-end: -7vw;
+  left: 60vw;
+  animation: snowfall 6s linear infinite;
+  animation-delay: -6s;
+}
+
+.snowflake:nth-child(49) {
+  --size: 0.6vw;
+  --left-ini: 7vw;
+  --left-end: 4vw;
+  left: 43vw;
+  animation: snowfall 13s linear infinite;
+  animation-delay: -10s;
+}
+
+.snowflake:nth-child(50) {
+  --size: 0.8vw;
+  --left-ini: 1vw;
+  --left-end: -4vw;
+  left: 61vw;
+  animation: snowfall 8s linear infinite;
+  animation-delay: -5s;
+}
+
+/* added small blur every 6 snowflakes*/
+.snowflake:nth-child(6n) {
+  filter: blur(1px);
+}
+
+/* SNOW fin */
+
+
+/* COMPTEUR */
 
 .countdown-container {
     display: flex;
@@ -51,17 +594,37 @@ h1 {
     font-size: 1.3rem;
 }
 
-.compteur {
-    background-color: #F5624D;
-    margin-right: 500px;
-    margin-left: 500px;
-    border-radius: 0px 0px 15px 15px;
+#countdown {
+    font-size: 1em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ff4938;
+    height: 50px;
+    margin-left: 70px;
+    margin-right: 70px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 10px 5px 70px black;
 }
 
-#inscription {
+.timer2 {
+  margin-left: 10px;
+  margin-right: 10px;
+  /* margin-bottom: 5px;
+  color: white;
+  text-align: center; */
+}
+
+/* LES 3 PAGES REUNIES fin */
+
+
+
+/* HOME */
+
+#inscrit {
     cursor: pointer;
     position: relative;
-    bottom: 600px;
     font-weight: bold;
     color: black;
     background-color: #D9990B;
@@ -70,58 +633,80 @@ h1 {
 #presentation h2 {
     color: #D9990B;
 }
+#presentation p {
+    color: white;
+    font-size: 1em;
+}
 #presentation {
     color: white;
     font-size: 1.5rem;
 }
-#pereNoel {
-    z-index: 7;
+.pereNoel {
     display: flex;
-    justify-content: flex-end;
-    position: relative;
-    left: 95px;
+    justify-content: end;
+}
+/* HOME fin*/
+
+/* PRE-INSCRIPTION */
+
+#btnpre-inscription {
+  background-color: #D9990B;
+  color: black;
+  font-weight: bold;
 }
 
-/* BOULE DE NOEL */
+/* PRE-INSCRIPTION fin */
 
-.sphere {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin: 10px;
-    background: 
-      radial-gradient(
-        circle at 30% 30%,
-        #ffe136,
-        #774400
-      );
-      box-shadow: 0px 0px 15px 0px #00000077;
-  }
 
-/* INDEX  2 */
+/* INSCRIPTION */
 
-#envoyer {
+#pseudo {
+    color: #D9990B;
     font-weight: bold;
-    background-color: #D9990B;
-    width: 10em;  height: 3em;
-}
-#input {
-    background-color: #0F8A5F;
-    border: black;
-    color: white;
-    height: 50px;
-    outline:0px !important;
-    -webkit-appearance:none;
-    box-shadow: none !important;
-}
-#label2 {
-    font-weight: bold;
+    text-align: center;
+    /* position: relative;
+    top: 500px; */
 }
 
-#form2 {
-    position: relative;
-    top: 200px;
+#tiragebtn {
+  background-color: #D9990B;
+  color: black;
+  font-weight: bold;
 }
+
+#form {
+  color: white;
+  background-color: #ff4938;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#form input {
+  outline:0px !important;
+  -webkit-appearance:none;
+  box-shadow: none !important;
+}
+#ajouter {
+  background-color: #D9990B;
+  color: #111;
+  font-weight: bold;
+  border: none;
+  outline:0px !important;
+  -webkit-appearance:none;
+  box-shadow: none !important;
+}
+#section-list {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+/* INSCRIPTION fin */
+
+
+
+
+
+/* DISTRIBUTION */
 
 .cadeau  {
     display: flex;
@@ -133,3 +718,9 @@ h1 {
     background-color: transparent;
     border: none;
 }
+/* DISTRIBUTION fin */
+
+
+
+
+

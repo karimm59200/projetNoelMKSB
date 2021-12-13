@@ -1,5 +1,7 @@
 <?php
-require_once "ressources.php";
+// require_once "ressources.php";
+
+$mysqli = new mysqli("localhost", "root", "", "fetedenoel");
 
 if ($_POST) {
     $pseudo = $_POST['pseudo'];
@@ -11,7 +13,7 @@ if ($_POST) {
     else
         print("<h3>erreur enregistrement !!!</h3>\n");
 }
-?>
+?> 
 <form action="#" method="POST">
     <input type="text" name='pseudo' placeholder=" entre ton pseudo" required>
     <br>
