@@ -720,7 +720,14 @@ body.dark {
   z-index: -4;
   position: fixed;
   bottom: -70px;
-  
+}
+
+#btn-retour {
+  border: none;
+  background-color: #123;
+  outline:0px !important;
+  -webkit-appearance:none;
+  box-shadow: none !important;
 }
 /* STYLE BTN */
 /* LES 3 PAGES REUNIES fin */
@@ -752,6 +759,12 @@ body.dark {
     display: flex;
     justify-content: end;
 }
+#bcp-cadeau {
+  width: 150px;
+  position: absolute;
+  left: 160px;
+  bottom: 180px;
+}
 /* HOME fin*/
 
 /* PRE-INSCRIPTION */
@@ -772,9 +785,6 @@ body.dark {
     text-align: center;
     /* position: relative;
     top: 500px; */
-}
-.tirage {
-
 }
 
 #donneur, #receveur {
@@ -1109,3 +1119,4 @@ width: 120%;
 
 /* Cadeaux Animés */
 /* DISTRIBUTION fin */
+
