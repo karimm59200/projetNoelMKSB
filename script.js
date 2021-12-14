@@ -20,6 +20,7 @@ var x = setInterval(function() {
     
   // Output the result in an element with id="demo"
   document.getElementById("countdown").innerHTML =  `<div class="temps">${days}<br> jours</div><div class="temps">${hours}<br> hours</div><div class="temps">${minutes}<br> minutes</div><div class="temps">${seconds}<br> secondes</div>`
+
     
   // If the count down is over, write some text 
   if (distance < 0) {
@@ -61,5 +62,4 @@ ajouter.addEventListener('click', e => {
 
 
 // TIRAGE AU SORT //
-
 

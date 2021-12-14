@@ -15,7 +15,6 @@
   position: relative;
   bottom: -45px;
 }
-
 /* Sapin de noel fin */
 
 .dark-toggle-mode {
@@ -607,26 +606,40 @@ body.dark {
 /* COMPTEUR */
 
 .countdown-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .big-text {
-    font-weight: bold;
-    font-size: 2.5rem;
-    line-height: 1;
-    margin: 1rem 2rem;
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 1;
+  margin: 1rem 2rem;
 }
 
 .countdown-el {
-    text-align: center;
+  text-align: center;
 }
 
 .countdown-el span {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
+#countdown {
+  font-size: 1em;
+  text-align:center;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff4938;
+  height: 50px;
+  margin-left: 70px;
+  margin-right: 70px;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 10px 5px 70px black;
+}
 #countdown {
     font-size: 0.7em;
     text-align: center;
@@ -744,7 +757,6 @@ body.dark {
 
 /* PRE-INSCRIPTION fin */
 
-
 /* INSCRIPTION */
 
 #pseudo {
@@ -814,9 +826,6 @@ body.dark {
 /* INSCRIPTION fin */
 
 
-
-
-
 /* DISTRIBUTION */
 
 .cadeau  {
@@ -831,10 +840,13 @@ body.dark {
 }
 /* DISTRIBUTION fin */
 
+
 /* Cadeaux Animés */
 
 #img-cadeaux{
+
 width: 120%;
+
 }
 #cadeaux-anim{
   transform: scale(0.5);
@@ -1086,6 +1098,3 @@ width: 120%;
 
 /* Cadeaux Animés */
 /* DISTRIBUTION fin */
-
-
-
