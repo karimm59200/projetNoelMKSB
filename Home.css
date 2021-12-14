@@ -1,82 +1,96 @@
-@media  (min-width: 320px) and (max-width: 375px) {
+  @media screen and (max-width: 555px) {
+    
+    #button-noel {
+      position: absolute;
+      top: 350px;
+      left: 80px;
+    }
+    #sapin-noel {
+      position: absolute;
+      width: 300px;
+      left:  -100px;
+      bottom:  200px;
+    }
+    #btn-retour {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
     #countdown {
       margin-left: 40px;
       margin-right: 40px;
       height: 70px;
       font-size: 0.8rem;
     }
-    .button-noel {
-      bottom: 190px;
+  }
+  @media (min-width: 555px) and (max-width: 800px) {
+    
+    #button-noel {
+      position: absolute;
+      top: 350px;
+      left: 80px;
     }
     #sapin-noel {
-        position: absolute;
-        bottom: 220px;
+      position: absolute;
+      width: 300px;
+      left:  -100px;
+      bottom:  200px;
     }
-  }
-  @media  (min-width: 376px) and (max-width: 425px) {
+    
     #countdown {
-      margin-left: 70px;
-      margin-right: 70px;
+      margin-left: 15%;
+      margin-right: 15%;
       height: 70px;
       font-size: 0.8rem;
     }
-    .button-noel {
-      bottom: 190px;
+  }
+  @media (min-width: 800px) and (max-width: 1200px) {
+    
+    #button-noel {
+      position: absolute;
+      top: 350px;
+      left: 80px;
     }
     #sapin-noel {
-        position: absolute;
-        bottom: 210px;
+      position: absolute;
+      width: 300px;
+      left:  -100px;
+      bottom:  200px;
     }
-  }
-  @media  (min-width: 426px) and (max-width: 768px) {
+    
     #countdown {
-      margin-left: 70px;
-      margin-right: 70px;
+      margin-left: 200px;
+      margin-right: 200px;
       height: 70px;
       font-size: 0.8rem;
-    }
-    .button-noel {
-      bottom: 190px;
-    }
-    #sapin-noel {
-        position: absolute;
-        bottom: 185px;
-    }
-  }
-  
-  @media  (min-width: 769px) and (max-width: 1024px) {
-    #countdown {
-      margin-left: 90px;
-      margin-right: 90px;
-      height: 70px;
-      font-size: 0.8rem;
-    }
-    .button-noel {
-      bottom: 190px;
     }
     #neige {
       width: 100%;
-    }
-    #sapin-noel {
-        position: absolute;
-        bottom: 260px;
+      max-height: 50%;
     }
   }
-  @media  (min-width: 1025px) and (max-width: 1440px) {
+  @media (min-width: 1200px) and (max-width: 1440px) {
+    
+    #button-noel {
+      position: absolute;
+      top: 350px;
+      left: 80px;
+    }
+    #sapin-noel {
+      position: absolute;
+      width: 300px;
+      left:  -100px;
+      bottom:  200px;
+    }
+    
     #countdown {
-      margin-left: 150px;
-      margin-right: 150px;
+      margin-left: 200px;
+      margin-right: 200px;
       height: 70px;
       font-size: 0.8rem;
     }
-    .button-noel {
-      bottom: 190px;
-    }
     #neige {
       width: 100%;
-    }
-    #sapin-noel {
-        position: absolute;
-        bottom: 400px;
+      max-height: 50%;
     }
   }

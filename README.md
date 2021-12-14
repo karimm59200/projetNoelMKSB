@@ -18,3 +18,4 @@ BENOIT :
     - tirage au sort (aidé par gaetan)
     - Phrase de présentation de la page Home.html
     - Img père Noel
+    - bouton retour à la page précèdente avec son responsive
