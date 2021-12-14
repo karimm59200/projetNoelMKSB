@@ -75,6 +75,10 @@
         font-size: 0.8rem;
       }
     }
+    #retourarr{
+      position: absolute;
+      right: 950px;
+    }
 
   .tirage{
     color: white;
