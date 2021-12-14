@@ -1,0 +1,82 @@
+@media  (min-width: 320px) and (max-width: 375px) {
+    #countdown {
+      margin-left: 40px;
+      margin-right: 40px;
+      height: 70px;
+      font-size: 0.8rem;
+    }
+    .button-noel {
+      bottom: 190px;
+    }
+    #sapin-noel {
+        position: absolute;
+        bottom: 220px;
+    }
+  }
+  @media  (min-width: 376px) and (max-width: 425px) {
+    #countdown {
+      margin-left: 70px;
+      margin-right: 70px;
+      height: 70px;
+      font-size: 0.8rem;
+    }
+    .button-noel {
+      bottom: 190px;
+    }
+    #sapin-noel {
+        position: absolute;
+        bottom: 210px;
+    }
+  }
+  @media  (min-width: 426px) and (max-width: 768px) {
+    #countdown {
+      margin-left: 70px;
+      margin-right: 70px;
+      height: 70px;
+      font-size: 0.8rem;
+    }
+    .button-noel {
+      bottom: 190px;
+    }
+    #sapin-noel {
+        position: absolute;
+        bottom: 185px;
+    }
+  }
+  
+  @media  (min-width: 769px) and (max-width: 1024px) {
+    #countdown {
+      margin-left: 90px;
+      margin-right: 90px;
+      height: 70px;
+      font-size: 0.8rem;
+    }
+    .button-noel {
+      bottom: 190px;
+    }
+    #neige {
+      width: 100%;
+    }
+    #sapin-noel {
+        position: absolute;
+        bottom: 260px;
+    }
+  }
+  @media  (min-width: 1025px) and (max-width: 1440px) {
+    #countdown {
+      margin-left: 150px;
+      margin-right: 150px;
+      height: 70px;
+      font-size: 0.8rem;
+    }
+    .button-noel {
+      bottom: 190px;
+    }
+    #neige {
+      width: 100%;
+    }
+    #sapin-noel {
+        position: absolute;
+        bottom: 400px;
+    }
+  }

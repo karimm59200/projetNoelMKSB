@@ -19,7 +19,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("countdown").innerHTML =  `<div class="timer2">${days}<br> jours</div><div class="timer2">${hours}<br> hours</div><div class="timer2">${minutes}<br> minutes</div><div class="timer2">${seconds}<br> secondes</div>`
+  document.getElementById("countdown").innerHTML =  `<div class="temps">${days}<br> jours</div><div class="temps">${hours}<br> hours</div><div class="temps">${minutes}<br> minutes</div><div class="temps">${seconds}<br> secondes</div>`
     
   // If the count down is over, write some text 
   if (distance < 0) {
@@ -32,13 +32,15 @@ var x = setInterval(function() {
 
 // FUNCTION AJOUTER //
 
-let ajouter = document.querySelector('#ajouterid');
+let ajouter = document.querySelector('#ajouterbtn');
 let input = document.querySelector('#inputAjouter');
+let nom = input.value;
 
 ajouter.addEventListener('click', e => {
   e.preventDefault();
   let div = document.createElement("div");
-  div.innerHTML = `${input.value}`
+  div.innerHTML = `${input.value}`;
+console.log(div);
   document.querySelector('#section-list').appendChild(div);
 });
 
@@ -46,3 +48,18 @@ ajouter.addEventListener('click', e => {
   e.preventDefault();
   input.value ="";
 });
+
+// let cadeau = document.querySelector('#img-cadeau')
+
+// cadeau.addEventListener('click', e => {
+  //   e.preventDefault();
+  
+  // })
+
+// let div = [`${input.value}`];
+// console.log(div);
+
+
+// TIRAGE AU SORT //
+
+
