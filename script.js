@@ -19,7 +19,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("countdown").innerHTML =  `<div class="timer2">${days}<br> jours</div><div class="timer2">${hours}<br> hours</div><div class="timer2">${minutes}<br> minutes</div><div class="timer2">${seconds}<br> secondes</div>`
+  document.getElementById("countdown").innerHTML =  `<div class="temps">${days}<br> jours</div><div class="temps">${hours}<br> hours</div><div class="temps">${minutes}<br> minutes</div><div class="temps">${seconds}<br> secondes</div>`
+
     
   // If the count down is over, write some text 
   if (distance < 0) {
@@ -32,48 +33,33 @@ var x = setInterval(function() {
 
 // FUNCTION AJOUTER //
 
-let ajouter = document.querySelector('#ajouterid');
+let ajouter = document.querySelector('#ajouterbtn');
 let input = document.querySelector('#inputAjouter');
-let form = document.querySelector('#form')
+let nom = input.value;
 
-ajouter.addEventListener('click', (e) => {
+ajouter.addEventListener('click', e => {
   e.preventDefault();
   let div = document.createElement("div");
-  div.innerHTML = `${input.value}`
+  div.innerHTML = `${input.value}`;
+console.log(div);
   document.querySelector('#section-list').appendChild(div);
 });
 
-ajouter.addEventListener('click', (e) => {
+ajouter.addEventListener('click', e => {
   e.preventDefault();
   input.value ="";
 });
 
-// let cadeaux = document.querySelector('#img-cadeaux')
+// let cadeau = document.querySelector('#img-cadeau')
 
-// cadeaux.addEventListener('click', e => {
-//   e.preventDefault();
+// cadeau.addEventListener('click', e => {
+  //   e.preventDefault();
   
-// })
+  // })
 
-// Tirage au sort
-// const list = []; //création du tableau vide
+// let div = [`${input.value}`];
+// console.log(div);
 
-// doument.querySelector('#name').addEventListener('keypress', function (e) {
-//   if (e.key === "Entrer") {
-//     const name = document.getElementById('name').value;
-//     list.push(name);
-//     console.log(list);
-//   };
-// });
 
-// const go = document.getElementById('go');
+// TIRAGE AU SORT //
 
-// go.addEventListener('click', function() {
-//   const choose = Math.floor(Math.random()*list.length);
-
-//   const result = list[choose];
-//   document.getElementById('result').textContent = result;
-
-//   list.splice(choose, 1);
-//   console.log(list);
-// });

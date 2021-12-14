@@ -1,22 +1,20 @@
 /* LES 3 PAGES REUNIES */
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  align-items: center;
-  padding: 3%;
-}
+
 /* Sapin de noel */
 
 #sapin-noel{
   position: absolute;
-  z-index: 9999;
-  bottom: 10%;
-  right: 60%;
+  z-index: -1;
+  bottom: 27%;
+  right: 50%;
   width: 250px;
 }
-
+#bcp-cadeau {
+  z-index: 0;
+  width: 150px;
+  position: relative;
+  bottom: -45px;
+}
 /* Sapin de noel fin */
 
 .dark-toggle-mode {
@@ -28,11 +26,16 @@
 
 .div-conteneur {
     position: relative;
-    top: 70px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     opacity: 0.7;
+}
+#retour {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  padding: 3%;
 }
 
 .conteneur {
@@ -45,7 +48,8 @@
     border-radius: 5px;
     height: 50px;
     width: 100px;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: rgba(146, 146, 146);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,11 +60,27 @@ body {
 	height: 100vh;
 	transition: background 0.2s linear;
   overflow: hidden;
-
 }
 
+
 body.dark {
+  /* background: linear-gradient(rgb(34, 114, 233), rgb(101, 196, 224)); */
   background: linear-gradient(rgb(214, 44, 21), rgb(161, 58, 58));
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  align-items: center;
+  padding: 3%;
+  display: flex;
+  justify-content: center;
+}
+
+#dejaInscrit {
+  color: white;
 }
 
 .checkbox {
@@ -620,13 +640,31 @@ body.dark {
   border-radius: 0 0 20px 20px;
   box-shadow: 10px 5px 70px black;
 }
+#countdown {
+    font-size: 0.7em;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ff4938;
+    height: 50px;
+    margin-left: 70px;
+    margin-right: 70px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 10px 5px 70px black;
+}
+#countdown.blue {
+  background-color: #232259;
 
-.timer2 {
-margin-left: 10px;
-margin-right: 10px;
- margin-bottom: 5px;
-color: white;
-text-align: center; 
+}
+
+.temps {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  color: white;
+  text-align: center;
 }
 
 /* STYLE BTN */
@@ -637,12 +675,18 @@ text-align: center;
 	padding: 15px 20px;
 	text-decoration: none;
 	color: #fff;
-	background: red;
+	background: #ec2a18;
 	outline: none;
 	border-radius: 15px;
 	position: relative;
-  
 }
+.button-noel.blue {
+  background-color: #232259;
+}
+.button-noel, a:hover {
+  color:#fff;
+}
+
 .btn-noel{
   display:flex;
   justify-content: center;
@@ -651,6 +695,7 @@ text-align: center;
 
 .button-noel::before {
 	content: '';
+  color: #fff;
 	display: block;
 	position: absolute;
 	top: -7px;
@@ -662,8 +707,15 @@ text-align: center;
 	url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAXCAYAAACFxybfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAodJREFUeNrsVb1rWlEUv2pN/GqspKRSKFYXWzEloIWif0Fn6dJChQ7OQil0qd3EzcEpg0OgdHDr4CQODk7VRlLMEIVqApX4We0zflR9/Z1Ui4T34ksaaAYP/Hzc673n/M6550PG8zz73yKjn0wm83fDYDAwo9HINBrNnwOQg4MDs0ql2lQqlfdAWont7ng8Pjw+Ps44nc4G1pI9EXWaSOzt7TGO42aH5Pv7+08ajUZ0MBiUeXEZd7vdL5VK5fX29rZ+5tQiEmdxKrlcjsEYczgcynK5/BKKv/IXFNz/XiqVXkHdjUuRIA9SqdRD8or/R8Ez9fr9fqHVakUR4c2z0REjIQuHw2ZcrPBXLCA0RHTezEdHjIQqkUhEr9I4HOILhQLf6/VoOUFEvDMiQiToDx1Cdz+bzZ6bUFarlel0OkkVUK/XWbvdPoVer5fh3ntsfwJ+CJ2XA4p0Op1bpBgJyxDehQQ6nQ5DZXHBYDBZq9V+EhFUndnr9drEqoc2bwJbwGPgtohuVSwWe2Gz2TZMJpNgRKi6qtUqg2EWj8dTgUDgo0KhWPN4PC70EvXOzs67fD6/S6kiRIKeZA1YJ2MiJNbdbvfTUCjkV6vVK2hcDF8GI2w0GrGTkxM2HA5PDxaLxSOfz/cWEfk81X0XIMMFgJJ/srBjCgk8IdcfuVyuZ36//7nFYtkQyAMumUzuRiKRD0jMFLa+AZOpYwqgB/ziBVqmVBKUO7eAB/R0WG/Z7XaTVqtdbTabHJL6EK2djBaBPHA0NSqpbUsiMUeEBgpF4Q5AbZrmSJ/yEWgBTaBNHl9kdkgmMUeG7qwAq9PqovceTA3zlxlgsuswyuXsGsiSxJLEkoSY/BZgAEjRodi+uBruAAAAAElFTkSuQmCC) no-repeat 100% 0;
 }
 
-/* STYLE BTN */
 
+#neige {
+  width: 800px;
+  z-index: -4;
+  position: fixed;
+  bottom: -70px;
+  
+}
+/* STYLE BTN */
 /* LES 3 PAGES REUNIES fin */
 
 
@@ -687,14 +739,12 @@ text-align: center;
 }
 #presentation {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 .pereNoel {
     display: flex;
     justify-content: end;
 }
-
-
 /* HOME fin*/
 
 /* PRE-INSCRIPTION */
@@ -707,7 +757,6 @@ text-align: center;
 
 /* PRE-INSCRIPTION fin */
 
-
 /* INSCRIPTION */
 
 #pseudo {
@@ -717,7 +766,18 @@ text-align: center;
     /* position: relative;
     top: 500px; */
 }
+.tirage {
 
+}
+
+#donneur, #receveur {
+  border: 1px solid white;
+  padding: 1%;
+}
+
+.fa-arrow-down {
+  transform: scale(3);
+}
 #tiragebtn {
   background-color: #D9990B;
   color: black;
@@ -729,6 +789,9 @@ text-align: center;
   background-color: #ff4938;
   border-radius: 5px;
   padding: 10px;
+}
+#form.blue {
+  background-color: #232259;
 }
 
 #form input {
@@ -745,18 +808,22 @@ text-align: center;
   -webkit-appearance:none;
   box-shadow: none !important;
 }
+#ajouterbtn {
+  background-color: #232259;
+  border: none;
+  outline:0px !important;
+  -webkit-appearance:none;
+  box-shadow: none !important;
+}
+#ajouterbtn.red {
+  background-color: #f5322b;
+}
 #section-list {
   color: white;
   font-weight: bold;
   text-align: center;
 }
 /* INSCRIPTION fin */
-
-
-/* INSCRIPTION fin */
-
-
-
 
 
 /* DISTRIBUTION */
@@ -771,11 +838,15 @@ text-align: center;
     background-color: transparent;
     border: none;
 }
+/* DISTRIBUTION fin */
+
 
 /* Cadeaux Animés */
 
 #img-cadeaux{
-  width: 120%;
+
+width: 120%;
+
 }
 #cadeaux-anim{
   transform: scale(0.5);
@@ -1027,8 +1098,3 @@ text-align: center;
 
 /* Cadeaux Animés */
 /* DISTRIBUTION fin */
-
-
-
-
-
