@@ -57,6 +57,10 @@
         bottom: 10px;
         right: 10px;
       }
+      #retourarr{
+        position: absolute;
+        right: 700px;
+      }
     }
   
     @media (min-width: 520px) and (max-width: 800px){
@@ -73,6 +77,10 @@
         margin-right: 15%;
         height: 70px;
         font-size: 0.8rem;
+      }
+      #retourarr{
+        position: absolute;
+        right: 950px;
       }
     }
 

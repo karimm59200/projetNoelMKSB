@@ -70,27 +70,7 @@
         </div>
         <!-- SNOW -->
 
-        <!-- BENOIT -->
-        <section id="cadeaux">
-            <div class="">
-                <div class="row" id="cadeaux-anim">
-                  <div class="col-12 mt-5 d-flex justify-content-center">
-                    <div class="box">
-                      <div class="box-body">
-                        <img class="img" id="img-cadeaux" src="./img/x-mas.png">
-                        <div class="box-lid">
-                          
-                          <div class="box-bowtie"></div>
-                   
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </section>
-        <!-- BENOIT -->
+        
         <!-- <div class="d-flex justify-content-center">
           <div class="btn-noel"><a href="./distribution.html" class="button-noel mt-4">Effectuer le tirage au sort</a></div> 
         </div> -->
@@ -111,7 +91,32 @@
             </div>
           </div>
           <div class="d-flex justify-content-center mt-5">
-            <button id="tas1" class="button-noel d-flex justify-content-center" onclick="tiragePersonnes(array_name)">Tirer au sort</button>
+            <button
+              id="tas1"
+              class="d-flex justify-content-center"
+              onclick="tiragePersonnes(array_name)"
+            >
+              <section id="cadeaux">
+                <div class="">
+                  <div class="row" id="cadeaux-anim">
+                    <div class="col-12 mt-5 d-flex justify-content-center">
+                      <div class="box">
+                        <div class="box-body">
+                          <img
+                            class="img"
+                            id="img-cadeaux"
+                            src="./img/x-mas.png"
+                          />
+                          <div class="box-lid">
+                            <div class="box-bowtie"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </button>
           </div>
         </section>
         
@@ -130,6 +135,7 @@
           <div class="" id="retour">
             <a href="./Home.html"><button class="btn btn-primary" id="btn-retour">Retour à la page d'acceuil</button></a>
           </div>
+          <input type="button" class="btn btn-primary" value="Retour" id="retourarr" onclick="history.go(-1)" />
     </footer>
     </main>
     <script>
