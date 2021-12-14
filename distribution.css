@@ -5,6 +5,12 @@
       height: 70px;
       font-size: 0.8rem;
     }
+
+    #retourarr{
+      position: absolute;
+      /* right: 250px; */
+      left: 0px;
+    }
   }
   @media  (min-width: 376px) and (max-width: 425px) {
     #countdown {
@@ -13,6 +19,10 @@
       height: 70px;
       font-size: 0.8rem;
     }
+    #retourarr{
+      position: absolute;
+      right: 300px;
+    }
   }
   @media  (min-width: 426px) and (max-width: 768px) {
     #countdown {
@@ -20,6 +30,10 @@
       margin-right: 70px;
       height: 70px;
       font-size: 0.8rem;
+    }
+    #retourarr{
+      position: absolute;
+      right: 350px;
     }
   }
   
@@ -30,6 +44,10 @@
       height: 70px;
       font-size: 0.8rem;
     }
+    #retourarr{
+      position: absolute;
+      right: 700px;
+    }
   }
   @media  (min-width: 1025px) and (max-width: 1440px) {
     #countdown {
@@ -37,6 +55,10 @@
       margin-right: 150px;
       height: 70px;
       font-size: 0.8rem;
+    }
+    #retourarr{
+      position: absolute;
+      right: 950px;
     }
   }
 
