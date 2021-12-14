@@ -1,3 +1,4 @@
+
 SAMUEL : 
     - Responsive avec les medias query
     - formulaire de la page inscription
@@ -9,6 +10,7 @@ SAMUEL :
     - Maquette sur figma
     - btn "déjà inscrit, cliquez ici"
     - récupérer et afficher les pseudos en dessous du formulaire
+    
 BENOIT : 
 
     - Animation du cadeau sur la page distribution
