@@ -1,9 +1,12 @@
   @media screen and (max-width: 555px) {
     
-    #button-noel {
+    .button-noel {
       position: absolute;
       top: 350px;
-      left: 80px;
+    }
+    #dejaInscrit {
+      position: absolute;
+      top: 420px;
     }
     #sapin-noel {
       position: absolute;
@@ -25,10 +28,13 @@
   }
   @media (min-width: 555px) and (max-width: 800px) {
     
-    #button-noel {
+    .button-noel {
       position: absolute;
       top: 350px;
-      left: 80px;
+    }
+    #dejaInscrit {
+      position: absolute;
+      top: 420px;
     }
     #sapin-noel {
       position: absolute;
@@ -36,7 +42,6 @@
       left:  -100px;
       bottom:  200px;
     }
-    
     #countdown {
       margin-left: 15%;
       margin-right: 15%;
@@ -46,10 +51,13 @@
   }
   @media (min-width: 800px) and (max-width: 1200px) {
     
-    #button-noel {
+    .button-noel {
       position: absolute;
       top: 350px;
-      left: 80px;
+    }
+    #dejaInscrit {
+      position: absolute;
+      top: 420px;
     }
     #sapin-noel {
       position: absolute;
@@ -70,11 +78,14 @@
     }
   }
   @media (min-width: 1200px) and (max-width: 1440px) {
-    
-    #button-noel {
+
+    .button-noel {
       position: absolute;
       top: 350px;
-      left: 80px;
+    }
+    #dejaInscrit {
+      position: absolute;
+      top: 420px;
     }
     #sapin-noel {
       position: absolute;

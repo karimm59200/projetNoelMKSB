@@ -1,3 +1,7 @@
+
+/* LES 3 PAGES REUNIES */
+
+
 /* Sapin de noel */
 
 #sapin-noel{
@@ -43,8 +47,6 @@
   bottom: 0px;
   right: 0px;
   padding: 3%;
-  display: flex;
-  justify-content: center;
 }
 
 .conteneur {
@@ -858,11 +860,6 @@ body.dark {
     background-color: transparent;
     border: none;
 }
-
-#tas1{
-  background: none;
-  border: none;
-}
 /* DISTRIBUTION fin */
 
 
@@ -883,6 +880,7 @@ width: 120%;
   content: "";
   width: 370px;
   height: 370px;
+  background-color: #89cff0;
   position: absolute;
   z-index: -1;
   top: 50%;
