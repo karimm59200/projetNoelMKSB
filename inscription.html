@@ -75,7 +75,7 @@
 
         <!-- FORM SAMUEL -->
         <div class="d-flex justify-content-center" id="div-form-inscription">
-          <form id="form" class="col-7 m-3">
+          <div id="form" class="col-7 m-3">
             <h3 class="text-center mb-3">Inscrivez-vous</h3>
             <div class="form-group row">
               <label for="pseudo" class="col-sm-3 col-form-label">Pseudo :</label>
@@ -86,7 +86,7 @@
             <div class="d-flex justify-content-center mt-3">
               <button class="btn btn-primary" onclick="ajouter()" id="ajouterbtn">Ajouter</button>  
             </div>
-          </form>
+          </div>
         </div>
         <div id="dejaInscrit">
           <p class="text-center">Déjà inscrit, <a href="./distribution.html">Cliquez ici !</a></p>
@@ -94,7 +94,7 @@
         <!-- FORM SAMUEL -->
 
 
-        <section id="section-list"></section>
+        <section id="section-list" class=""></section>
         <!-- <div id="pseudo"></div> -->
         
             <!-- BENOIT -->
@@ -119,7 +119,7 @@
                 </div>
               </div>
               <div class="" id="retour">
-                <a href="./Home.html"><button class="btn btn-primary" id="btn-retour">Retour à la page d'acceuil</button></a>
+                <a href="./index.html"><button class="btn btn-primary" id="btn-retour">Retour à la page d'acceuil</button></a>
               </div>
            
               
@@ -127,22 +127,81 @@
   </div>
     </main>
     <script>
+       // new creation d'un objet XMLHttpRequest 
+       const xhttp = new XMLHttpRequest();
+        
+        // je defini la fonction qui sera utilisé une fois les données chargées
+        xhttp.onload = function() 
+        {
+            // console.log( this.responseText );
+            let tableauData = JSON.parse( this.responseText );
+            let chaine = "";
+
+                for ( ligne of tableauData )
+                    chaine += `<div class="p-2"> ${ligne['pseudo']}</div>`;
+
+            //console.log( chaine );
+            document.getElementById("section-list").innerHTML = chaine;
+        }
+        // je prépare l'appel de l'URL
+        xhttp.open("POST", 'listeInscrit.php' );
+        // j'envoie l'url
+        xhttp.send();
+      
+// $("#inputAjouter").click(function()
+//                    {
+//                       let tableau = JSON.parse( 
+//                           $("#section-list").load("listeInscrit.php"));
+//                       let chaine = "<table>";
+//                       for ( ligne of tableau )
+//                       {
+//                           chaine += "<tr><td>"+ligne['nom']+"</td></tr>";;
+//                       }
+//                       chaine += "</table>";
+//                       $( "#section-list").text( chaine );
+//                    }
+//                 );
+
       // envoi données en back
-    function ajouter()
+      function ajouter()
     {
       if($('#inputAjouter').val() != "")
       {
-          $.post("formulaireInscriptionNoel.php",
+        $.post("formulaireInscriptionNoel.php",
+            {
+                'pseudo' : $('#inputAjouter').val()
+            },
+            function(data,status)
+            {
+                     // new creation d'un objet XMLHttpRequest 
+            const xhttp = new XMLHttpRequest();
+              
+              // je defini la fonction qui sera utilisé une fois les données chargées
+              xhttp.onload = function() 
               {
-                  'pseudo' : $('#inputAjouter').val()
-              },
-              function(data,status)
-              {}
-          );
+                  // console.log( this.responseText );
+                  let tableauData = JSON.parse( this.responseText );
+                  let chaine = "";
+
+                      for ( ligne of tableauData )
+                          chaine += `<div class="p-2"> ${ligne['pseudo']}</div>`;
+
+                  //console.log( chaine );
+                  document.getElementById("section-list").innerHTML = chaine;
+              }
+              // je prépare l'appel de l'URL
+              xhttp.open("POST", 'listeInscrit.php' );
+              // j'envoie l'url
+              xhttp.send();
+            }
+        );
+
+
       }
+
       else
-          alert("Champ vide !!!");
-    }
+        alert("Champ vide !!!");
+    } 
 
       // fetch récupère la liste des inscrits
       // fetch("./listeInscrit.php")
@@ -162,11 +221,11 @@
 			// 		console.log(error);
 			// 	});
 
-        function create(pseudo) {
-            let div = document.createElement('div');
-            div.innerHTML = `<div>${pseudo}</div>`
-            document.querySelector('#pseudo').appendChild(div);
-        }
+        // function create(pseudo) {
+        //     let div = document.createElement('div');
+        //     div.innerHTML = `<div>${pseudo}</div>`
+        //     document.querySelector('#pseudo').appendChild(div);
+        // }
 
         
         // fetch récupère le formulaire d'inscription

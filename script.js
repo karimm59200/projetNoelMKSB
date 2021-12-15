@@ -1,7 +1,7 @@
 // COUNTDOWN //
 
 // Set the date we're counting down to
-var countDownDate = new Date("Dec 15, 2021 17:00:00").getTime();
+var countDownDate = new Date("Dec 15, 2021 16:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -24,7 +24,7 @@ var x = setInterval(function() {
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("countdown").innerHTML = "EXPIRED";
+    document.getElementById("countdown").innerHTML = "<h1>Joyeux Noël !!</h1>";
   }
 }, 1000);
 
