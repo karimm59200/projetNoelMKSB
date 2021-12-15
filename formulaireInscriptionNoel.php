@@ -1,10 +1,12 @@
 <?php
-require_once "ressources.php";
-require_once "fonctions.php";
+// require_once "ressources.php";
+
+$mysqli = new mysqli("localhost", "root", "", "fetedenoel");
+
 if ($_POST) {
     $pseudo = $_POST['pseudo'];
 
-    $query  = "insert into inscriptions (pseudo) values ( '$pseudo' );";
+    $query  = "insert into inscription (pseudo) values ( '$pseudo' );";
     $res = query($query);
     if ($res)
         print("<h3> $pseudo enregistré</h3>\n");

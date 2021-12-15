@@ -1,0 +1,89 @@
+/* @media  (min-width: 320px) and (max-width: 375px) {
+    #countdown {
+      margin-left: 40px;
+      margin-right: 40px;
+      height: 70px;
+      font-size: 0.8rem;
+    }
+  }
+  @media  (min-width: 376px) and (max-width: 425px) {
+    #countdown {
+      margin-left: 70px;
+      margin-right: 70px;
+      height: 70px;
+      font-size: 0.8rem;
+    }
+  }
+  @media  (min-width: 426px) and (max-width: 768px) {
+    #countdown {
+      margin-left: 70px;
+      margin-right: 70px;
+      height: 70px;
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media  (min-width: 769px) and (max-width: 1024px) {
+    #countdown {
+      margin-left: 90px;
+      margin-right: 90px;
+      height: 70px;
+      font-size: 0.8rem;
+    }
+  }
+  @media  (min-width: 1025px) and (max-width: 1440px) {
+    #countdown {
+      margin-left: 150px;
+      margin-right: 150px;
+      height: 70px;
+      font-size: 0.8rem;
+    }
+  } */
+  @media screen and (max-width: 550px){
+    #countdown {
+      margin-left: 10%;
+      margin-right: 10%;
+      height: 70px;
+      font-size: 0.8rem;
+    }
+      #form {
+        transform: scale(1.2);
+      }
+      #div-form-inscription {
+        margin: 50px;
+      }
+      #btn-retour {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+      }
+      #retourarr{
+        position: absolute;
+        right: 700px;
+      }
+    }
+  
+    @media (min-width: 520px) and (max-width: 800px){
+      #countdown {
+        margin-left: 15%;
+        margin-right: 15%;
+        height: 70px;
+        font-size: 0.8rem;
+      }
+    }
+    @media (min-width: 800px) and (max-width: 1440px){
+      #countdown {
+        margin-left: 15%;
+        margin-right: 15%;
+        height: 70px;
+        font-size: 0.8rem;
+      }
+      #retourarr{
+        position: absolute;
+        right: 950px;
+      }
+    }
+
+  .tirage{
+    color: white;
+  }
