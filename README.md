@@ -2,13 +2,15 @@ SAMUEL :
     - Responsive avec les medias query
     - formulaire de la page inscription
     - compteur
-    - thème (btn toogle, changement de couleur)
+    - thème (btn toogle, changement de couleur) avec son javascript theme.js
     - Animation background enneigé
     - btn retour à la page acceuil
     - tirage au sort (aidé par gaetan)
     - Maquette sur figma
     - btn "déjà inscrit, cliquez ici"
     - récupérer et afficher les pseudos en dessous du formulaire
+
+
 BENOIT : 
 
     - Animation du cadeau sur la page distribution
