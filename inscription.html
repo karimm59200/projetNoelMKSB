@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./inscription.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Inscription</title>
 </head>
 <body>
@@ -83,7 +84,7 @@
               </div>
             </div> 
             <div class="d-flex justify-content-center mt-3">
-              <button class="btn btn-primary" id="ajouterbtn">Ajouter</button>  
+              <button class="btn btn-primary" onclick="ajouter()" id="ajouterbtn">Ajouter</button>  
             </div>
           </form>
         </div>
@@ -126,23 +127,40 @@
   </div>
     </main>
     <script>
-      // fetch récupère la liste des inscrits
-      fetch("./listeInscrit.php")
-				.then(function (result) {
-					if (result.status === 200) {
-						return result.json();
-					}
-				}).then(function (value) {
-          let list = value;
-					
-          list.forEach(v => {
-            // console.log(v.pseudo);
+      // envoi données en back
+    function ajouter()
+    {
+      if($('#inputAjouter').val() != "")
+      {
+          $.post("formulaireInscriptionNoel.php",
+              {
+                  'pseudo' : $('#inputAjouter').val()
+              },
+              function(data,status)
+              {}
+          );
+      }
+      else
+          alert("Champ vide !!!");
+    }
 
-            create(v.pseudo)
-            });
-				}).catch(function (error) {
-					console.log(error);
-				});
+      // fetch récupère la liste des inscrits
+      // fetch("./listeInscrit.php")
+			// 	.then(function (result) {
+			// 		if (result.status === 200) {
+			// 			return result.json();
+			// 		}
+			// 	}).then(function (value) {
+      //     let list = value;
+					
+      //     list.forEach(v => {
+      //       // console.log(v.pseudo);
+
+      //       create(v.pseudo)
+      //       });
+			// 	}).catch(function (error) {
+			// 		console.log(error);
+			// 	});
 
         function create(pseudo) {
             let div = document.createElement('div');

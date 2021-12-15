@@ -32,21 +32,21 @@ var x = setInterval(function() {
 
 // FUNCTION AJOUTER //
 
-let ajouter = document.querySelector('#ajouterbtn');
-let input = document.querySelector('#inputAjouter');
+//let ajouter = document.querySelector('#ajouterbtn');
+// let input = document.querySelector('#inputAjouter');
 
-ajouter.addEventListener('click', e => {
-  e.preventDefault();
-  let div = document.createElement("div");
-  div.innerHTML = `${input.value}`;
-console.log(div);
-  document.querySelector('#section-list').appendChild(div);
-});
+// ajouter.addEventListener('click', e => {
+//   e.preventDefault();
+//   let div = document.createElement("div");
+//   div.innerHTML = `${input.value}`;
+// console.log(div);
+//   document.querySelector('#section-list').appendChild(div);
+// });
 
-ajouter.addEventListener('click', e => {
-  e.preventDefault();
-  input.value ="";
-});
+// ajouter.addEventListener('click', e => {
+//   e.preventDefault();
+//   input.value ="";
+// });
 
 // let cadeau = document.querySelector('#img-cadeau')
 
